@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="onBtn1Click()">点击触发防抖！</button>
+    <button onclick="onBtn2Click()">点击触发节流！</button>
+    <script>
+      // 防抖 在搜索是，window.onresize
+      function debounce() {
+        let timer = null;
+        return function () {
+          if (timer) {
+            clearTimeout(timer);
+          }
+          timer = setTimeout(() => {
+            console.log(`我的延时器：${timer}`);
+          }, 3000);
+        };
+      }
+      window.onBtn1Click = debounce();
+
+      //   节流 ：点击按钮多次触发，监听滚动
+      throttle = () => {
+        let isDisable = false;
+        return () => {
+          if (isDisable) {
+            return false;
+          }
+          isDisable = true;
+          setTimeout(() => {
+            console.log(`这是节流`);
+            isDisable = false;
+          }, 3000);
+        };
+      };
+      window.onBtn2Click = throttle();
+    </script>
+  </body>
+</html>

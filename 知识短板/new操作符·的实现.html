@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function newObj() {
+        let obj = new Object();
+        Constructor = [].shift.call(arguments);
+        obj._proto_ = Constructor.prototype;
+        let ret = Constructor.apply(obj, arguments);
+        return ret === 'object' ? ret : obj; //是对象返回对象，不是就返回圆心的值
+      }
+    </script>
+  </body>
+</html>
