@@ -1,0 +1,23 @@
+{
+  "name": "mylibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "echarts": "^2.2.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afanQWQ/MyLibrary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afanQWQ/MyLibrary/issues"
+  },
+  "homepage": "https://github.com/afanQWQ/MyLibrary#readme"
+}
